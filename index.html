@@ -1,119 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cartas e Respostas</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #ffe4e1; /* cor de fundo suave */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartas e Respostas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e6f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 1000px;
-  }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
 
-  .card {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-  }
+        .card {
+            width: 200px;
+            height: 200px;
+            background-color: #ff80c0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-  .card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
 
-  .card.flipped .card-inner {
-    transform: rotateY(180deg);
-  }
+        .answer {
+            display: none;
+            padding: 10px;
+            text-align: center;
+            background-color: #ffb3d9;
+            border-radius: 10px;
+        }
 
-  .card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    background-color: #ff69b4; /* rosa vibrante */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    font-size: 1em;
-  }
+        .card.open .answer {
+            display: block;
+        }
 
-  .card-front {
-    font-weight: bold;
-  }
-
-  .card-back {
-    transform: rotateY(180deg);
-  }
-</style>
-</head>
-<body>
-
-<h1>Cartas e Respostas</h1>
-<div class="container">
-
-  <div class="card" onclick="flipCard(this)">
-    <div class="card-inner">
-      <div class="card-front">
-        Quem sou eu?
-      </div>
-      <div class="card-back">
-        Sou Gabrielly, tenho 16 anos e trabalho no período da tarde, e à noite vou à escola. Meus hobbies são cozinhar.
-      </div>
-    </div>
-  </div>
-
-  <div class="card" onclick="flipCard(this)">
-    <div class="card-inner">
-      <div class="card-front">
-        Eu e a minha escola
-      </div>
-      <div class="card-back">
-        Estou estudando no 2º ano do período noturno. Gosto muito da escola que frequento.
-      </div>
-    </div>
-  </div>
-
-  <div class="card" onclick="flipCard(this)">
-    <div class="card-inner">
-      <div class="card-front">
-        Eu e a minha família
-      </div>
-      <div class="card-back">
-        Minha família é unida e eu amo estar com eles.
-      </div>
-    </div>
-  </div>
-
-  <div class="card" onclick="flipCard(this)">
-    <div class="card-inner">
-      <div class="card-front">
-        Meus pets
-      </div>
-      <div class="card-back">
-        Atualmente, tenho apenas um cachorro.
-      </div>
-    </div>
-  </div>
-
-  <div class="card" onclick="flipCard(this)">
-    <div class="card-inner">
-      <div class="
+        .question {
+            font-size: 18px;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+        }

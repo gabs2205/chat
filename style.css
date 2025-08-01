@@ -1,0 +1,54 @@
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card" onclick="toggleCard(this)">
+        <div class="question">Quem sou eu?</div>
+        <div class="answer">
+            Sou Gabrielly, tenho 16 anos e trabalho no período da tarde, e à noite vou à escola. Meus hobbies são cozinhar.
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <div class="question">Eu e a minha escola</div>
+        <div class="answer">
+            Estou estudando no 2º ano do período noturno. Gosto muito da escola que frequento.
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <div class="question">Eu e a minha família</div>
+        <div class="answer">
+            Minha família é unida e eu amo estar com eles.
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <div class="question">Meus pets</div>
+        <div class="answer">
+            Atualmente, tenho apenas um cachorro.
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <div class="question">Meu presente</div>
+        <div class="answer">
+            Estou amando a maneira como Deus está fazendo as coisas.
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <div class="question">Meu futuro</div>
+        <div class="answer">
+            Pretendo me formar em psicologia ou pediatria, quero me casar e ter filhos.
+        </div>
+    </div>
+
+    <div class="card" onclick="toggleCard(this)">
+        <div class="question">Como estarei daqui a 10 anos</div>
+        <div class="answer">
+            Pretendo estar casada, morando na minha casa própria e atuando na minha área de formação.
+        </div>
+    </div>
+</div>
